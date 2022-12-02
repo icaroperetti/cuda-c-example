@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #define SIZE	1024
 
@@ -27,6 +27,7 @@ int main()
 		c[i] = 0;
 	}
 
+        // Cria um bloco com 1024 threads
 	VectorAdd <<<1, SIZE>>>(a, b, c, SIZE);
 
 	cudaDeviceSynchronize();
